@@ -1,0 +1,182 @@
+/**************************************
+                GLOBAL
+***************************************/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+a {
+    text-decoration: inherit;
+    color: white;
+}
+
+i {
+    font-style: normal;
+    color: rgb(57, 57, 57);
+}
+
+h3{
+    margin: 0;
+}
+
+:root {
+    --m-gray: #263238;
+    --m-blue: rgba(58,151,180,1);
+    --m-red: rgb(217, 83, 79);
+    --m-green: rgb(59, 177, 59);
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+
+/**************************************
+                BUTTON
+***************************************/
+.btn{
+    cursor: pointer;
+}
+
+/**************************************
+                NAVBAR
+***************************************/
+
+.navbar{
+    padding: 20px;
+    background-color: var(--m-gray);
+}
+
+.navbar a{
+    font-weight: bold;
+}
+
+/**************************************
+                LIST
+***************************************/
+
+.list{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.table_container{
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95vw;
+    max-width: 700px;
+}
+
+td, th {
+padding: 8px;
+font-weight: unset !important;
+}
+
+th .date{
+    margin: 0px;
+    font-size: 11px;
+    color: rgb(143, 143, 143);
+    font-weight: 500;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+thead th {
+padding-top: 12px;
+padding-bottom: 12px;
+background-color: var(--m-gray);
+color: white;
+}
+
+/**************************************
+                FORM
+***************************************/
+
+form{
+    max-width: 500px;
+    width: 300px;
+    display: grid;
+}
+
+.input_container{
+    display: grid;
+}
+
+.input_container label{
+    margin-bottom: 10px;
+}
+
+.input_container input, .input_container select{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.input_container select{
+    padding-right: 20px;
+}
+
+form .btn{
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: auto;
+}
+
+.btn{
+    background: var(--m-blue);
+    border: unset;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+/**************************************
+                CURRENT BALANCE
+***************************************/
+
+.currentBalance{
+    padding: 20px;
+    border: 1px #ccc solid;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.currentBalance strong{
+    margin: 0 10px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.currentBalance .btn{
+    margin-left: auto;
+    font-size: 14px;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
