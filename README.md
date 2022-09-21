@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# CHALLENGE FULL STACK - JavaScript 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue desarrollado como reto para conocer y demostrar las habilidades del programador en el lenguaje de programación React y Node.js Express.
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Este proyecto consiste en realizar una aplicación web para administración de presupuesto personal, donde podemos ver todos nuestros ingresos y gastos totales registrados, así como también realizar operaciones de creación, edición y eliminación de los mismos.
 
-### `npm start`
+## Funcionalidad 📋
+ - Visualización del total de ingresos y egresos.
+ - Lista para agregar, editar y borrar los ingresos y gastos totales registrados. 
+ - Lista para agregar, editar y borrar los conceptos. 
+ - Formulario para registrar los ingresos y egresos con su respectiva información (fecha inicio, descripción, monto, concepto, tipo). 
+ - Formulario para registrar los conceptos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Mejoras a implementar 💡
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - Agregar un formulario de registro y login para permitir identificar al usuario.
+ - Agregar funcionalidad de reportes y estadísticas.
 
-### `npm test`
+## Desarrollos futuros 📌
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - Mejorar la interfaz de usuario. 
+ - Agregar funcionalidad de cambio de moneda. 
+ - Agregar funcionalidad para registrar usuarios en la base de datos.
 
-### `npm run build`
+## Herramientas utilizadas 🛠️ 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Visual Studio Code](https://code.visualstudio.com/) - IDE utilizado para desarrollo del proyecto
+- [Postman](https://www.getpostman.com) - Para hacer pruebas a las APIs
+- [Git](https://git-scm.com/) - Control de versiones
+- [Github](https://github.com/ElverGonzalez) - Repositorio remoto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Front-end** 
+    - [React](https://reactjs.org/) - Framework JavaScript de código abierto para construir interfaces de usuario en la web moderna. 
+**Back-end** 
+    - [NodeJS](http://nodejs.org/) - Entorno de ejecución JavaScript que permite la creación de aplicaciones web escalables.
+    - [ExpressJS](https://expressjs.com/es/) - Framework web de código abierto para Node.js, diseñado para simplificar la creación de aplicaciones y apis Web rápidas y flexibles.
+**Base de Datos** 
+    - [MySQL](https://www.mysql.com/) - Sistema de gestión de bases de datos relacionales open source.
+    - [MySQL Workbench](https://www.mysql.com/products/workbench/) - Administrador de bases de datos
+    
+    
+## Cómo instalarlo 📦
+ 
+Para poder correr este proyecto debemos seguir los siguientes pasos:
+* Clonar el repositorio en nuestro equipo. 
+```
+git clone https://github.com/lucianorepetto/WalletAppChallenge.git
+```
+* Instalar las dependencias necesarias del proyecto (tanto para la carpeta server como client). Para ello, debemos ingresar a cada una de las carpetas y ejecutar el siguiente comando en nuestra terminal: 
+``` 
+npm install 
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ## Cómo correrlo 🚀
 
-### `npm run eject`
+ * Abrimos nuestra terminal en la carpeta "node" y ejecutamos el siguiente comando:
+``` 
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ * Abrimos otra pestaña de nuestra terminal en la carpeta "wallet-app" y ejecutamos el siguiente comando: 
+``` 
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Ingresamos a nuestro navegador en la dirección http://localhost:3000/ para ver las interacciones con la aplicación. 
+ 
+### Puedes ver una demo funcional aquí [Enlace]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Pruebas realizadas 📋
+La aplicación fue probada en diferentes navegadores y dispositivos: 
+- Google Chrome (PC)
+- Mozilla Firefox (PC)
+- Microsoft Edge (PC)
+- Google Chrome (Android)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Autores ✒
 
-## Learn More
+ * **Luciano Repetto** - [GitHub](https://github.com/lucianorepetto) - [LinkedIn](www.linkedin.com/in/lucianorepetto)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
