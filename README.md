@@ -32,15 +32,15 @@ Este proyecto consiste en realizar una aplicación web para administración de p
 - [Github](https://github.com/ElverGonzalez) - Repositorio remoto
 
 ### Front-end
-    - [React](https://reactjs.org/) - Framework JavaScript de código abierto para construir interfaces de usuario en la web moderna. 
+- [React](https://reactjs.org/) - Framework JavaScript de código abierto para construir interfaces de usuario en la web moderna. 
 
 ### Back-end
-    - [NodeJS](http://nodejs.org/) - Entorno de ejecución JavaScript que permite la creación de aplicaciones web escalables.
-    - [ExpressJS](https://expressjs.com/es/) - Framework web de código abierto para Node.js, diseñado para simplificar la creación de aplicaciones y apis Web rápidas y flexibles.
+- [NodeJS](http://nodejs.org/) - Entorno de ejecución JavaScript que permite la creación de aplicaciones web escalables.
+- [ExpressJS](https://expressjs.com/es/) - Framework web de código abierto para Node.js, diseñado para simplificar la creación de aplicaciones y apis Web rápidas y flexibles.
 
 ### Base de Datos
-    - [MySQL](https://www.mysql.com/) - Sistema de gestión de bases de datos relacionales open source.
-    - [MySQL Workbench](https://www.mysql.com/products/workbench/) - Administrador de bases de datos
+- [MySQL](https://www.mysql.com/) - Sistema de gestión de bases de datos relacionales open source.
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) - Administrador de bases de datos
     
 ## Cómo instalarlo 📦
  
