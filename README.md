@@ -56,7 +56,7 @@ git clone https://github.com/lucianorepetto/WalletAppChallenge.git
 ``` 
 npm install 
 ```
-## Crear tablas ⚙
+## Crear tablas 🛠
 
 Para poder utilizar la aplicación debemos crear los siguientes objetos en nuestra base de datos: 
 
@@ -82,7 +82,9 @@ CREATE TABLE IF NOT EXISTS concepts (
 );
 ```
 
-## Cómo correrlo 🚀
+## Cómo correrlo ⚡️
+
+IMPORTANTE! Para correr el proyecto correctamente debemos modificar los datos en la caperta node > server.js > dbOptions
 
  * Abrimos nuestra terminal en la carpeta "node" y ejecutamos el siguiente comando:
 ``` 
@@ -105,7 +107,7 @@ La aplicación fue probada en diferentes navegadores y dispositivos:
 - Microsoft Edge (PC)
 - Google Chrome (Android)
 
-## Autores ✒
+## Autor ✒
 
  * **Luciano Repetto** - [GitHub](https://github.com/lucianorepetto) - [LinkedIn](www.linkedin.com/in/lucianorepetto)
 
