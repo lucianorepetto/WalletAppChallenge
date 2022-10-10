@@ -166,6 +166,7 @@ form .btn{
     border-radius: 10px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .currentBalance strong{
@@ -175,6 +176,7 @@ form .btn{
 }
 
 .currentBalance .btn{
+    margin: 10px 0;
     margin-left: auto;
     font-size: 14px;
     padding: 10px 20px;

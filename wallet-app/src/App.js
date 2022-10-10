@@ -2,7 +2,6 @@ import React, {Fragment, useState, useEffect} from 'react';
 import Navbar from './Components/Navbar'
 import List from './Components/List';
 import './App.css';
-import Form from './Components/Form';
 
 function App() {
   //Form 
@@ -19,42 +18,27 @@ function App() {
 
   const [all_data, setAllData] = useState([])
   useEffect(() => {
-    const getBooks = ()=>{
+    const getData = ()=>{
       fetch('http://localhost:9000/api/activity')
-      .then(res => res.json())
-      .then(res => {
+      .then(activities => activities.json())
+      .then(activities => {
         return fetch('http://localhost:9000/api/concepts')
         .then(concepts => concepts.json())
         .then(concepts => {
-          res.map(x => {
+          activities.map(a => {
             for (let c of concepts){
-              if(c.id === parseInt(x.concept)){
-                x.concept = c.description
+              if(c.id === parseInt(a.concept)){
+                a.concept = c.description
               }
             }
-            return x
+            return a
           })
-          return res
+          return activities
         })
       })
-      .then(res => {
-        return fetch('http://localhost:9000/api/concepts')
-        .then(concepts => concepts.json())
-        .then(concepts => {
-          res.map(x => {
-            for (let c of concepts){
-              if(c.id === parseInt(x.concept)){
-                x.concept = c.description
-              }
-            }
-            return x
-          })
-          return res
-        })
-      })
-      .then(res => setAllData(res))
+      .then(activities => setAllData(activities))
     }
-    getBooks()
+    getData()
     setListUpdated(false)
   }, [listUpdated])
   

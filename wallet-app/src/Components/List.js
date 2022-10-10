@@ -53,10 +53,6 @@ const BookList = ({all_data, data, setData, setListUpdated}) => {
         // setListUpdated(true)
     }
 
-    const handleFilter = () => {
-        toast.success('added',{style: {borderRadius: '10px',background: '#333',color: '#fff'}})
-    }
-
     let [currentBalance, setCurrentBalance] = useState(0.00)
     
     return (
@@ -66,15 +62,14 @@ const BookList = ({all_data, data, setData, setListUpdated}) => {
                 <tbody>
                     {
                         all_data.map((data, i) => {
-                            currentBalance += parseFloat(data.amount)
+                            currentBalance += (data.type === 1 ? parseFloat(data.amount): parseFloat(-data.amount))
                             return (<tr key={i}>
-                                <th><i className={"fas fa-chart-line"+(data.type === 1 ? '': '-down')} style={{color: (data.type === 1 ? 'var(--m-green)': 'var(--m-red)')}}></i></th>
                                 <th style={{textAlign: 'initial'}}>
                                     {data.description}
                                     <p style={{margin: '0',fontSize: '11px',color: '#8f8f8f',fontWeight: '500'}}>{data.concept}</p>
                                     <p className="date">{data.date.split('T')[0].split('-').join(' ')}</p>
                                 </th>
-                                <th>${data.amount}</th>
+                                <th style={{color: (data.type === 1 ? 'var(--m-green)': 'var(--m-red)')}}>${data.type === 1 ? data.amount: -data.amount}</th>
                                 
                                 <th>
                                     <i className='far fa-trash' style={{cursor: 'pointer', marginRight: '10px'}} onClick={()=>handlePopUpDelete(data.id)}></i>
@@ -86,7 +81,6 @@ const BookList = ({all_data, data, setData, setListUpdated}) => {
                 </tbody>
             </table> 
         </div>
-        <div style={{cursor:'pointer', padding: '10px',textAlign: 'end'}} onClick={()=>handleFilter()}>Filter <i class="far fa-filter"></i></div>
         <CurrentBalance data={data} setData={setData} currentBalance={currentBalance} setListUpdated={setListUpdated}/>
         <PopUp trigger={buttonPopup} setPopUp={setPopUp}></PopUp>
         <Toaster position="bottom-right"/>

@@ -3,7 +3,6 @@ import {Toaster, toast} from "react-hot-toast";
 import PopUp from "./PopUp";
 import Select from "react-select"
 
-
 /**
  * Form for Insert/Update data in list
  * @param {object} props Component props
@@ -92,7 +91,6 @@ const Form = (props) => {
         })
     }
 
-    
     const handleDeleteConcept = (id, concept) => {
         setPopUp(() => {
             return <Fragment>
@@ -116,7 +114,6 @@ const Form = (props) => {
                                 return x
                             })
                             concepts.splice(pos, 1)
-                            // setConcepts(concepts)
                 
                             toast.success(res,{style: {borderRadius: '10px',background: '#333',color: '#fff'}})
                             handleListConcepts()
@@ -162,14 +159,18 @@ const Form = (props) => {
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        amount = parseFloat(amount)
+        amount = Math.abs(parseFloat(amount))
         //validation
-        if(date === "" || description === "" || amount === 0 || concept === "" || type < 0){
-            return toast.error("Todos los campos son obligatorios",{style: {borderRadius: '10px',background: '#333',color: '#fff'}})
-        }
+        if(date === ""){return toast.error("Please enter a valid date",{style: {borderRadius: '10px',background: '#333',color: '#fff'}})}
+        if(description === ""){return toast.error('"Description" is empty',{style: {borderRadius: '10px',background: '#333',color: '#fff'}})}
+        if(amount === 0){return toast.error("Amount must not be 0",{style: {borderRadius: '10px',background: '#333',color: '#fff'}})}
+        if(concept === ""){return toast.error('"Concept" is empty',{style: {borderRadius: '10px',background: '#333',color: '#fff'}})}
+        console.log(type)
+        if(type <= 0){return toast.error('"Type" is empty',{style: {borderRadius: '10px',background: '#333',color: '#fff'}})}
 
         //format date
         props.data.date = date.split('T')[0]
+        props.data.amount = amount
 
         //consulta
         if(props.btn === 'add'){

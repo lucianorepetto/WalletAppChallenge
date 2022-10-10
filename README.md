@@ -1,14 +1,14 @@
 # CHALLENGE FULL STACK - JavaScript 🚀
 
-Este proyecto fue desarrollado como reto para conocer y demostrar las habilidades del programador en el lenguaje de programación React y Node.js Express.
+Este proyecto fue desarrollado como reto para conocer y demostrar las habilidades del programador en el lenguaje de programación React, Node.js Express y creacion de Base de Datos relacional.
 
 ## Descripción
 
-Este proyecto consiste en realizar una aplicación web para administración de presupuesto personal, donde podemos ver todos nuestros ingresos y gastos totales registrados, así como también realizar operaciones de creación, edición y eliminación de los mismos.
+Este proyecto consiste en realizar una aplicación web para administración de presupuesto personal, donde podemos ver todos nuestros ingresos y egresos totales registrados, así como también realizar operaciones de creación, edición y eliminación de los mismos.
 
 ## Funcionalidad 📋
  - Visualización del total de ingresos y egresos.
- - Lista para agregar, editar y borrar los ingresos y gastos totales registrados. 
+ - Lista para agregar, editar y borrar los ingresos y egresos totales registrados. 
  - Lista para agregar, editar y borrar los conceptos. 
  - Formulario para registrar los ingresos y egresos con su respectiva información (fecha inicio, descripción, monto, concepto, tipo). 
  - Formulario para registrar los conceptos.
@@ -56,8 +56,33 @@ git clone https://github.com/lucianorepetto/WalletAppChallenge.git
 ``` 
 npm install 
 ```
+## Crear tablas ⚙
 
- ## Cómo correrlo 🚀
+Para poder utilizar la aplicación debemos crear los siguientes objetos en nuestra base de datos: 
+
+* Tabla activity:
+```
+CREATE TABLE IF NOT EXISTS activity (
+    id INT NOT NULL AUTO_INCREMENT,
+    date_start date NOT NULL,
+    description varchar(255) NOT NULL,
+    amount INT NOT NULL,
+    concept INT NOT NULL,
+    type varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+```
+
+* Tabla concepts:
+```
+CREATE TABLE IF NOT EXISTS concepts (
+    id INT NOT NULL AUTO_INCREMENT,
+    description varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+```
+
+## Cómo correrlo 🚀
 
  * Abrimos nuestra terminal en la carpeta "node" y ejecutamos el siguiente comando:
 ``` 
